@@ -11,7 +11,11 @@ export class ListComponent implements OnInit {
   constructor(private crudService: CrudService) { }
 
   ngOnInit(): void {
-    this.crudService.getList().subscribe((res: any) => this.lists = res);
+    this.getList();
+  }
+  getList(){
+    this.crudService.getList().subscribe((res: any) => this.lists = [{'Nam':'blalbl','Id':12}]);
     console.log(this.lists);
+
   }
 }

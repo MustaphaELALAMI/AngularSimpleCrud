@@ -11,9 +11,8 @@ export class CrudService {
   constructor(private httpClient: HttpClient) {}
 
   public getList(): Observable<any> {
-    let Url = 'https://jsonplaceholder.typicode.com/posts';
+    const Url = 'https://jsonplaceholder.typicode.com/posts';
     return this.httpClient.get(Url);
   }
-
 }
 
